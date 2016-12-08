@@ -1,0 +1,25 @@
+{% extends "base.html"%}
+{% block title%}Task Manager - Posamezen task{% endblock title%}
+
+
+{% block vsebina_strani %}
+<h1>Vsebina taska</h1>
+<div class="row">
+        <div class="col-md-3">
+            {{task.sporocilo}}
+            {{task.dokoncan}}
+            {{task.cas_nastanka}}
+        </div>
+        <div class="col-md-1">
+            <a href="/seznam/{{task.key.id()}}/edit"><button class ="btn btn-default">Uredi</button></a>
+        </div>
+        <div class="col-md-2">
+            <form method="post" action="" name="opravljeno">
+                <button class ="btn btn-success" >Opravljeno/Ne opravljeno</button>
+            </form>
+        </div>
+        <div class="col-md-1">
+            <a href="/seznam/{{task.key.id()}}/delete"><button class ="btn btn-danger">Izbriši</button></a>
+        </div>
+</div>
+{% endblock vsebina_strani %}

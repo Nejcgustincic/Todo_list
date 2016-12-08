@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{% block title%}Task Manager - Seznam{% endblock title%}
+{% block vsebina_strani %}
+<h1>Seznam opravljenih taskov</h1>
+
+{% for task in taski%}
+    {% if task.dokoncan == True and task.je_izbrisan == False %}
+    <div class = "row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">{{task.sporocilo}}</div>
+        <div class="col-md-2">{{task.cas_nastanka}}</div>
+        <div class="col-md-1">{{task.dokoncan}}</div>
+        <div class="col-md-2"><a href="/seznam/{{task.key.id()}}"><button class="btn btn-default">Ogled/Uredi</button></a></div>
+
+
+    </div>
+    {% endif %}
+{% endfor%}
+
+
+{% endblock vsebina_strani %}

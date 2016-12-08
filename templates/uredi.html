@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{% block title%}Task Manager - Uredi{% endblock title%}
+{% block vsebina_strani %}
+<br>
+<br>
+<form method ="post" action="">
+    <label for="text_taska">Vsebina taska</label>
+    <input name="text_taska" id="text_taska" value="{{task.sporocilo}}">
+    <button type="submit">Shrani</button>
+
+</form>
+{% endblock vsebina_strani %}

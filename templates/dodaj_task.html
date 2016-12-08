@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% block title%}Task Manager - Main page{% endblock title%}
+{% block vsebina_strani %}
+<form method = post action = "">
+    <div class="form-group">
+        <label for="sporocilo">Besedilo taska</label>
+        <input name="sporocilo" id="sporocilo">
+
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default" type="submit">Dodaj</button>
+    </div>
+</form>
+{% endblock vsebina_strani %}

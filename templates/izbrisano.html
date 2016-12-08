@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{% block title%}Task Manager - Main page{% endblock title%}
+{% block vsebina_strani %}
+<h1>Seznam izbrisanih taskov</h1>
+
+    {% for task in task%}
+
+        <div class = "row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">{{task.sporocilo}}</div>
+            <div class="col-md-2">{{task.cas_nastanka}}</div>
+            <div class="col-md-1">{{task.dokoncan}}</div>
+            <div class="col-md-1">{{task.je_izbrisan}}</div>
+            <div class="col-md-1"><a href="/seznam/{{task.key.id()}}"><button class="btn btn-default">Ogled/Uredi</button></a></div>
+            <div class="col-md-2"><form action="" method="post" name="obnovi"><button type="submit" class="btn btn-info">Obnovi</button></form></div>
+
+        </div>
+
+    {% endfor%}
+
+{% endblock vsebina_strani %}
