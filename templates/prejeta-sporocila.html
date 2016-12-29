@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+{% block title%}Task Manager - Seznam{% endblock title%}
+{% block vsebina_strani %}
+<h1>Seznam prejetih sporocil</h1>
+
+    {% for mail in mail %}
+
+
+        <div class = "row">
+
+            <div class="col-md-2">{{mail.avtor}}</div>
+            <div class="col-md-2">{{mail.besedilo}}</div>
+
+        </div>
+
+
+    {% endfor %}
+
+
+{% endblock vsebina_strani %}

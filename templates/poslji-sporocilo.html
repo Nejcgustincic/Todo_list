@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+{% block title %}Poslji sporocilo{% endblock title %}
+{% block vsebina_strani%}
+<h1>Pošlji sporočilo sodelavcu</h1>
+<form method="post" action="">
+    <label for="naslovnik">Vnesi naslovnika</label>
+    <input name="naslovnik" id="naslovnik" type="email">
+    <label for="sporocilo">Besedilo sporočila</label>
+    <input name="sporocilo" id="sporocilo">
+    <button class="btn btn-default" type="submit">Pošlji</button>
+</form>
+
+{% endblock vsebina_strani%}

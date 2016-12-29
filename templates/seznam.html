@@ -6,7 +6,8 @@
     {% for task in taski%}
         {% if task.dokoncan == False %}
         <div class = "row">
-            <div class="col-md-1"></div>
+
+            <div class="col-md-1">{{task.avtor}}</div>
             <div class="col-md-4">{{task.sporocilo}}</div>
             <div class="col-md-2">{{task.cas_nastanka}}</div>
             <div class="col-md-1">{{task.dokoncan}}</div>

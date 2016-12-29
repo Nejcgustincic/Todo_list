@@ -23,6 +23,15 @@
     <a href="/seznam"><button type="button" class="btn btn-default">Vsa opravila</button></a>
     <a href="/opravljeno"> <button type="button" class="btn btn-default">Opravljeno</button></a>
     <a href="/izbrisano"> <button type="button" class="btn btn-default">Izbrisana</button></a>
+    {% if user %}
+        <a href="{{logout_url}}"> <button type="button" class="btn btn-warning">Odjava</button></a>
+    {% else %}
+        <a href="{{login_url}}"> <button type="button" class="btn btn-success">Prijava</button></a>
+    {% endif %}
+    {% if user %}
+    <h1>Pozdravljeni {{user.nickname()}}</h1>
+    {% endif %}
+
 </div>
 
 {% block vsebina_strani %}
