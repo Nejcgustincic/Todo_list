@@ -23,6 +23,15 @@
     <a href="/seznam"><button type="button" class="btn btn-default">Vsa opravila</button></a>
     <a href="/opravljeno"> <button type="button" class="btn btn-default">Opravljeno</button></a>
     <a href="/izbrisano"> <button type="button" class="btn btn-default">Izbrisana</button></a>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    Sporočila <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+      <li><a href="/poslji-sporocilo">Pošlji sporočilo</a></li>
+      <li><a href="/prejeto">Prejeta</a></li>
+      <li><a href="/poslano">Poslana</a></li>
+    </ul>
+        </div>
     {% if user %}
         <a href="{{logout_url}}"> <button type="button" class="btn btn-warning">Odjava</button></a>
     {% else %}
